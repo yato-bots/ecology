@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Waste Management Compliance Tool</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Find Out When Your Business Needs to Comply with Organic Waste Management Regulations</h1>
+        <form id="quizForm">
+            <div class="question">
+                <h2>1. What is your zip code?</h2>
+                <label for="zip">Select your zip code:</label>
+                <select name="zip" id="zip">
+                    <option value="98105">98105</option>
+                    <option value="98106">98106</option>
+                    <option value="98107">98107</option>
+                    <option value="98108">98108</option>
+                </select>
+            </div>
+            <div class="question">
+                <h2>2. My business is considered</h2>
+                <select name="business-type" id="business-type">
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="Grocery, Speciality Foods, and/or Convenience Store">Grocery, Speciality Foods, and/or Convenience Store</option>
+                    <option value="Food Wholesaler, Distributor, or Manufacturer">Food Wholesaler, Distributor, or Manufacturer</option>
+                    <option value="Lodging or Hotel">Lodging or Hotel</option>
+                    <option value="Hospital">Hospital</option>
+                    <option value="Sports or Event Venue">Sports or Event Venue </option>
+                    <option value="Supercenter">Supercenter</option>
+                    <option value="Nursing or Residential Care Facility">Nursing or Residential Care Facility</option>
+                    <option value="Office Building with Dining Service">Office Building with Dining Service</option>
+                    <option value="College or University (Residential)">College or University (Residential)</option>
+                    <option value="College or University (Non-Residential)">College or University (Non-Residential)</option>
+                    <option value="Correctional Facility">Correctional Facility</option>
+                </select>
+            </div>
+            <div class="question">
+                <h2>3. What is the volume of organic waste your business produces weekly?</h2>
+                <label><input type="radio" name="volume" value="large">8 Cubic Yards</label><br>
+                <label><input type="radio" name="volume" value="medium">4 Cubic Yards</label><br>
+                <label><input type="radio" name="volume" value="small">96 Gallons</label>
+            </div>
+            <div class="question">
+                <h2>4. Which statement applies to you?</h2>
+                <label><input type="radio" name="self-cart" value="one" onclick="showFollowUpQuestion('one')">I have one 96-gallon garbage cart that is picked up once a week.</label><br>
+                <label><input type="radio" name="self-cart" value="more" onclick="showFollowUpQuestion('more')">I have more than one 96-gallon garbage cart that is picked up once a week.</label><br>
+                <label><input type="radio" name="self-cart" value="IDK" onclick="showFollowUpQuestion('IDK')">I don't know.</label><br>
+            </div>
+            <div id="followUpQuestionOne" class="question hidden hidden-dynamic">
+                <h2>5. How much food and yard waste is put in the garbage bin?</h2>
+                <label><input type="radio" name="follow-up-one" value="100%">100% of the bin is food and yard waste.</label><br>
+                <label><input type="radio" name="follow-up-one" value="75%">75% or less of the bin is food and yard waste.</label><br>
+            </div>
+            <div id="followUpQuestionMore" class="question hidden hidden-dynamic">
+                <h2>5. How much food and yard waste is put in the garbage bin?</h2>
+                <label><input type="radio" name="follow-up-more" value="50%">50% or more of the bin is food and yard waste.</label><br>
+                <label><input type="radio" name="follow-up-more" value="25%">25% or less of the bin is food and yard waste.</label><br>
+            </div>
+
+            <div id="followUpQuestionIDKRestaurant" class="question hidden hidden-dynamic">
+                <h2>5. Does your restaurant have at least 3 full-time employees or serve 188 meals per week?</h2>
+                <label><input type="radio" name="follow-up-idk-restaurant" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-restaurant" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKGrocery" class="question hidden hidden-dynamic">
+                <h2>5. Does your store have at least 4 full time employees?</h2>
+                <label><input type="radio" name="follow-up-idk-grocery" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-grocery" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKWholesaler" class="question hidden hidden-dynamic">
+                <h2>5. Does your business have at least 1 part time employee?</h2>
+                <label><input type="radio" name="follow-up-idk-wholesaler" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-wholesaler" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKHotel" class="question hidden hidden-dynamic">
+                <h2>5. Does your hotel or lodging have at least 34 rooms or 6 full time employees?</h2>
+                <label><input type="radio" name="follow-up-idk-hotel" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-hotel" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKHospital" class="question hidden hidden-dynamic">
+                <h2>5. Does your hospital have at least 10 beds or serve over 500 meals per week?</h2>
+                <label><input type="radio" name="follow-up-idk-hospital" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-hospital" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKVenue" class="question hidden hidden-dynamic">
+                <h2>5. Does your venue have at least 50 seats or 500 visitors or 225 meals per week??</h2>
+                <label><input type="radio" name="follow-up-idk-venue" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-venue" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKSupercenter" class="question hidden hidden-dynamic">
+                <h2>5. Does your supercenter have at least 12 employees?</h2>
+                <label><input type="radio" name="follow-up-idk-supercenter" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-supercenter" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKNursing" class="question hidden hidden-dynamic">
+                <h2>5. Does your facility have at least 18 beds?</h2>
+                <label><input type="radio" name="follow-up-idk-nursing" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-nursing" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKOffice" class="question hidden hidden-dynamic">
+                <h2>5. Does your office building serve over 360 meals per week?</h2>
+                <label><input type="radio" name="follow-up-idk-office" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-office" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKCollegeRes" class="question hidden hidden-dynamic">
+                <h2>5. Does your residential college have at least 135 students or serve over 1,000 meals per week?</h2>
+                <label><input type="radio" name="follow-up-idk-college-res" class="question hidden" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-college-res" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKCollegeNonRes" class="question hidden hidden-dynamic">
+                <h2>5. Does your non-residential college have at least 500 students or serve over 1,000 meals per week?</h2>
+                <label><input type="radio" name="follow-up-idk-college-non-res" class="question hidden" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-college-non-res" value="no">No</label><br>
+            </div>
+            <div id="followUpQuestionIDKCorrectional" class="question hidden hidden-dynamic">
+                <h2>5. Does your correctional facility have over 50 incarcerated individuals?</h2>
+                <label><input type="radio" name="follow-up-idk-correctional" class="question hidden" value="yes" onclick="showComplianceDate()">Yes</label><br>
+                <label><input type="radio" name="follow-up-idk-correctional" value="no">No</label><br>
+            </div>
+            <button type="button" onclick="calculateCompliance()">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
