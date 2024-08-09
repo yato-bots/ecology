@@ -1,3 +1,20 @@
+const businessTypeQuestions = {
+    "Restaurant": "5. Does your restaurant have at least 3 full-time employees or serve 188 meals per week?",
+    "Grocery, Speciality Foods, and/or Convenience Store": "5. Does your store have at least 4 full time employees?",
+    "Food Wholesaler, Distributor, or Manufacturer": "5. Does your business have at least 1 part time employee?",
+    "Lodging or Hotel": "5. Does your hotel or lodging have at least 34 rooms or 6 full time employees?",
+    "Hospital": "5. Does your hospital have at least 10 beds or serve over 500 meals per week?",
+    "Sports or Event Venue": "5. Does your venue have at least 50 seats or 500 visitors or 225 meals per week?",
+    "Supercenter": "5. Does your supercenter have at least 12 employees?",
+    "Nursing or Residential Care Facility": "5. Does your facility have at least 18 beds?",
+    "Office Building with Dining Service": "5. Does your office building serve over 360 meals per week?",
+    "College or University (Residential)": "5. Does your residential college have at least 135 students or serve over 1,000 meals per week?",
+    "College or University (Non-Residential)": "5. Does your non-residential college have at least 500 students or serve over 1,000 meals per week?",
+    "Correctional Facility": "5. Does your correctional facility have over 50 incarcerated individuals?"
+}
+
+let previousBusinessType = "";
+
 function showFollowUpQuestion(response) {
     const followUpQuestions = document.querySelectorAll('.question.hidden-dynamic');
     followUpQuestions.forEach(q => q.classList.add('hidden'));
@@ -9,40 +26,27 @@ function showFollowUpQuestion(response) {
     } else if (response === 'IDK') {
         const form = document.getElementById('quizForm');
         const businessType = form['business-type'].value;
-
-        if (businessType === 'Restaurant') {
-            document.getElementById('followUpQuestionIDKRestaurant').classList.remove('hidden');
-        } else if (businessType === 'Grocery, Speciality Foods, and/or Convenience Store') {
-            document.getElementById('followUpQuestionIDKGrocery').classList.remove('hidden');
-        } else if (businessType === 'Food Wholesaler, Distributor, or Manufacturer') {
-            document.getElementById('followUpQuestionIDKWholesaler').classList.remove('hidden');
-        } else if (businessType === 'Lodging or Hotel') {
-            document.getElementById('followUpQuestionIDKLodging').classList.remove('hidden');
-        } else if (businessType === 'Hospital') {
-            document.getElementById('followUpQuestionIDKHospital').classList.remove('hidden');
-        } else if (businessType === 'Sports or Event Venue') {
-            document.getElementById('followUpQuestionIDKVenue').classList.remove('hidden');
-        } else if (businessType === 'Supercenter') {
-            document.getElementById('followUpQuestionIDKSupercenter').classList.remove('hidden');
-        } else if (businessType === 'Nursing or Residential Care Facility') {
-            document.getElementById('followUpQuestionIDKNursing').classList.remove('hidden');
-        } else if (businessType === 'Office Building with Dining Service') {
-            document.getElementById('followUpQuestionIDKOffice').classList.remove('hidden');
-        } else if (businessType === 'College or University (Residential)') {
-            document.getElementById('followUpQuestionIDKCollegeRes').classList.remove('hidden');
-        } else if (businessType === 'College or University (Non-Residential)') {
-            document.getElementById('followUpQuestionIDKCollegeNonRes').classList.remove('hidden');
-        } else if (businessType === 'Correctional Facility') {
-            document.getElementById('followUpQuestionIDKCorrectional').classList.remove('hidden');
-        }
+        showBusinessTypeQuestion(businessType);
     }
 }
 
+function showBusinessTypeQuestion(businessType) {
+    if(previousBusinessType != businessType) {
+        previousBusinessType = businessType;
+        document.getElementById('businessTypeQuestion').innerText = businessTypeQuestions[businessType];
+    }
+    let form = document.getElementById('quizForm');
+    let volume = form.volume.value;
+    let selfCart = form['self-cart'].value;
+    if(volume && selfCart) {
+        document.getElementById('followUpQuestionBusinessType').classList.remove('hidden');
+    }
+};
 
 function calculateCompliance() {
-    const form = document.getElementById('quizForm');
-    const volume = form.volume.value;
-    const selfCart = form['self-cart'].value;
+    let form = document.getElementById('quizForm');
+    let volume = form.volume.value;
+    let selfCart = form['self-cart'].value;
 
     let complianceDate = '';
     let resources = '';
@@ -61,39 +65,18 @@ function calculateCompliance() {
     } else if (selfCart === 'more') {
         resources = 'link';
     } else if (selfCart === 'IDK') {
-        const businessType = form['business-type'].value;
-
-        if (businessType === 'Restaurant') {
-            followUpAnswer = form['follow-up-idk-restaurant'].value;
-        } else if (businessType === 'Grocery, Speciality Foods, and/or Convenience Store') {
-            followUpAnswer = form['follow-up-idk-grocery'].value;
-        } else if (businessType === 'Food Wholesaler, Distributor, or Manufacturer') {
-            followUpAnswer = form['follow-up-idk-wholesaler'].value;
-        } else if (businessType === 'Lodging or Hotel') {
-            followUpAnswer = form['follow-up-idk-lodging'].value;
-        } else if (businessType === 'Hospital') {
-            followUpAnswer = form['follow-up-idk-hospital'].value;
-        } else if (businessType === 'Sports or Event Venue') {
-            followUpAnswer = form['follow-up-idk-venue'].value;
-        } else if (businessType === 'Supercenter') {
-            followUpAnswer = form['follow-up-idk-supercenter'].value;
-        } else if (businessType === 'Nursing or Residential Care Facility') {
-            followUpAnswer = form['follow-up-idk-nursing'].value;
-        } else if (businessType === 'Office Building with Dining Service') {
-            followUpAnswer = form['follow-up-idk-office'].value;
-        } else if (businessType === 'College or University (Residential)') {
-            followUpAnswer = form['follow-up-idk-college-res'].value;
-        } else if (businessType === 'College or University (Non-Residential)') {
-            followUpAnswer = form['follow-up-idk-college-non-res'].value;
-        } else if (businessType === 'Correctional Facility') {
-            followUpAnswer = form['follow-up-idk-correctional'].value;
-        }
-
+        followUpAnswer = form['follow-up-question-answer'].value;
         if (followUpAnswer === 'yes') {
             complianceDate = 'January 1, 2026';
         }
     }
-
+    
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `<h2>Your Compliance Date: ${complianceDate}</h2><p>${resources}</p>`;
+    if(!complianceDate && !resources) {
+        alert('Please answer the questions before submitting.')
+    } else {
+        document.getElementsByTagName('body').scrollTop = document.getElementsByTagName('body').scrollHeight;
+        resultDiv.style.display = 'flex';
+        resultDiv.innerHTML = `<h2>Your Compliance Date: ${complianceDate}</h2><p>${resources}</p>`;
+    }
 }
