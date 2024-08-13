@@ -19,13 +19,8 @@
         <form id="quizForm">
             <div class="question">
                 <h2>1. What is your zip code?</h2>
-                <label for="zip">Select your zip code:</label>
-                <select name="zip" id="zip">
-                    <option value="98105">98105</option>
-                    <option value="98106">98106</option>
-                    <option value="98107">98107</option>
-                    <option value="98108">98108</option>
-                </select>
+                <label for="zip">Enter your zip code:</label>
+                <input type="text" id="zip" name="zip">
             </div>
             <div class="question">
                 <h2>2. My business is considered as</h2>
@@ -46,11 +41,12 @@
             </div>
             <div class="question">
                 <h2>3. What is the volume of organic waste your business produces weekly?</h2>
-                <label><input type="radio" name="volume" value="large">8 Cubic Yards</label><br>
-                <label><input type="radio" name="volume" value="medium">4 Cubic Yards</label><br>
-                <label><input type="radio" name="volume" value="small">96 Gallons</label>
+                <label><input type="radio" name="volume" value="large" onclick="showFollowUpQuestion('volume')">8 Cubic Yards</label><br>
+                <label><input type="radio" name="volume" value="medium" onclick="showFollowUpQuestion('volume')">4 Cubic Yards</label><br>
+                <label><input type="radio" name="volume" value="small" onclick="showFollowUpQuestion('volume')">96 Gallons</label><br>
+                <label><input type="radio" name="volume" value="IDK" onclick="showFollowUpQuestion('volume')">I don't know.</label>
             </div>
-            <div class="question">
+            <div class="question4 hidden hidden-dynamic">
                 <h2>4. Which statement applies to you?</h2>
                 <label><input type="radio" name="self-cart" value="one" onclick="showFollowUpQuestion('one')">I have one 96-gallon garbage cart that is picked up once a week.</label><br>
                 <label><input type="radio" name="self-cart" value="more" onclick="showFollowUpQuestion('more')">I have more than one 96-gallon garbage cart that is picked up once a week.</label><br>
