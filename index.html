@@ -20,7 +20,7 @@
                 <input type="text" id="zip" name="zip" oninput="validateZipCode()">
                 <p id="zipError" class="error hidden">Invalid zip code. Please enter a valid zip code.</p>
                 <p id="noComplianceMessage" class="info hidden">Based on the zip code you provided, you do not need to comply with regulations.</p>
-                <p id="partialMessage" class="info hidden">Your zip code is partially affected. Please consult this <a href="https://ecology.wa.gov/waste-toxics/reducing-recycling-waste/organics-and-food-waste/2022-organics-management-law/organics-management-for-businesses" target="_blank">BOMA Map</a> for more details.</p>
+                <p id="partialMessage" class="info hidden">Your zip code is partially affected. Please consult this <a href="https://ecology.wa.gov/waste-toxics/reducing-recycling-waste/organics-and-food-waste/2022-organics-management-law/organics-management-for-businesses" target="_blank">BOMA Map</a> and <a id="partialLink" href="#" target='_blank'>your local government's website</a> for more details.</p>
             </div>
 
             <!-- Question 2: Business Type -->
@@ -85,15 +85,15 @@
             <!-- Compliance Deadline Messages -->
             <div id="complianceDeadlineMessageLarge" class="info hidden">
                 <h2>Based on the information provided, you may need to comply by 2027.</h2>
-                <p>Resources.</p>
+                <p>Please consult your local government's <a id="complianceUrl" href="#" target="_blank">website</a> for more information.</p>
             </div>
             <div id="complianceDeadlineMessageMedium" class="info hidden">
                 <h2>Based on the information provided, you may need to comply by 2026.</h2>
-                <p>Resources.</p>
+                <p>Please consult your local government's <a id="complianceUrl" href="#" target="_blank">website</a> for more information.</p>
             </div>
             <div id="complianceDeadlineMessageSmall" class="info hidden">
                 <h2>Based on the information provided, you may need to comply by 2025.</h2>
-                <p>Resources.</p>
+                <p>Please consult your local government's <a id="complianceUrl" href="#" target="_blank">website</a> for more information.</p>
             </div>
             <div id="nonComplianceMessage" class="info hidden">
                 <h2>Based on the information provided, you may not need to comply.</h2>
