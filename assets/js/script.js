@@ -5,7 +5,7 @@ const zipPartial = ['98221', '98226', '98230', '98240', '98248', '98264', '98284
 
 // function to validate zip code and show questions 2 and 3
 function validateZipCode() {
-    const zipInput = document.getElementById('zip').value;
+    const zipInput = document.getElementById('zip').value.trim();
     const zipError = document.getElementById('zipError');
     const isZipValid = zipYes.includes(zipInput) || zipNo.includes(zipInput) || zipPartial.includes(zipInput);
     
