@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="quiz-container">
+        <a href="https://ecology.wa.gov/"><img class="logo" src="assets/image/ecology_logo_horizontal.png"/></a>
         <h1>Organic Waste Compliance Estimator</h1>
         <form id="quizForm">
             
@@ -26,8 +27,8 @@
             <!-- Question 2: Business Type -->
             <div id="question2" class="question hidden">
                 <h2>Your business is best described as:</h2>
-                <select name="businessType" id="businessType" onchange="updateBusinessFollowUpQuestion(this.value)">
-                    <option value="0">Select one</option>
+                <select name="businessType" id="businessType" onchange="updateBusinessFollowUpQuestion(this.value); showQuestion3()">
+                    <option value="" disabled selected>Select one</option>
                     <option value="Restaurant">Restaurant</option>
                     <option value="Grocery, Speciality Foods, and/or Convenience Store">Grocery, Speciality Foods, and/or Convenience Store</option>
                     <option value="Food Wholesaler, Distributor, or Manufacturer">Food Wholesaler, Distributor, or Manufacturer</option>
@@ -76,7 +77,7 @@
             </div>
 
             <!-- Question 5: Follow Up if Q4 = IDK -->
-            <div id="businessFollowUp" class="question hidden">
+            <div id="businessFollowUp" class="question hidden" onchange="updateBusinessFollowUpQuestion(this.value)">
                 <h2 id="businessTypeFollowUp"></h2>
                 <label><input type="radio" name="businessAnswer" value="yes" onclick="handleBusinesses('yes')">Yes</label>
                 <label><input type="radio" name="businessAnswer" value="no" onclick="handleBusinesses('no')">No</label>
@@ -99,6 +100,9 @@
                 <h2>Based on the information provided, you may not need to comply.</h2>
             </div>
         </form>
+    </div>
+    <div class="contact">
+        <p>Please email us at <a href="mailto:organics@ecy.wa.gov">organics@ecy.wa.gov</a> or call us at <a href="tel:509-960-1290">509-960-1290</a> if you need any technical assistance or would like to set up a virtual chat with Ecology.</p>
     </div>
 </body>
 </html>

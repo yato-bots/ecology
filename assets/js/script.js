@@ -105,7 +105,6 @@ const businessTypeFollowUp = {
     "Correctional Facility": "Does your correctional facility have over 50 incarcerated individuals?"
 }
 
-// function to validate zip code and show questions 2 and 3
 // Function to validate zip code and show/hide questions based on the zip code input
 function validateZipCode() {
     const zipInput = document.getElementById('zip').value;
@@ -116,21 +115,18 @@ function validateZipCode() {
     
     // Define questions
     const question2 = document.getElementById('question2');
-    const question3 = document.getElementById('question3');
     
     // Hide all messages and questions initially
     zipError.classList.add('hidden');
     noComplianceMessage.classList.add('hidden');
     partialMessage.classList.add('hidden');
     question2.classList.add('hidden');
-    question3.classList.add('hidden');
 
     // Check if zip code is valid
     if (zipYes.includes(zipInput) || zipNo.includes(zipInput) || zipPartial.includes(zipInput)) {
         // Determine visibility of messages and questions based on zip code input
         if (zipYes.includes(zipInput)) {
             question2.classList.remove('hidden');
-            question3.classList.remove('hidden');
         } else if (zipNo.includes(zipInput)) {
             noComplianceMessage.classList.remove('hidden');
         } else if (zipPartial.includes(zipInput)) {
@@ -143,6 +139,17 @@ function validateZipCode() {
     }
 }
 
+// function to show Question 3 when Question 2 is answered
+function showQuestion3() {
+    const businessType = document.getElementById('businessType').value;
+    const question3 = document.getElementById('question3');
+
+    question3.classList.add('hidden');
+
+    if (businessType !== "") {
+        question3.classList.remove('hidden');
+    }
+}
 
 // function to handle Question 3 responses
 function handleWasteVolumeSelection(value) {
@@ -152,11 +159,19 @@ function handleWasteVolumeSelection(value) {
     const complianceDeadlineMessageMedium = document.getElementById('complianceDeadlineMessageMedium');
     const complianceDeadlineMessageSmall = document.getElementById('complianceDeadlineMessageSmall');
     const complianceUrl = document.getElementById('complianceUrl')
+    const cartOne = document.getElementById('cartOne');
+    const cartMore = document.getElementById('cartMore');
+    const businessFollowUp = document.getElementById('businessFollowUp');
 
+    cartOne.classList.add('hidden');
+    cartMore.classList.add('hidden');
+    businessFollowUp.classList.add('hidden');
     complianceDeadlineMessageLarge.classList.add('hidden');
     complianceDeadlineMessageMedium.classList.add('hidden');
     complianceDeadlineMessageSmall.classList.add('hidden');
     complianceUrl.href = '#'
+
+    resetRadio();
 
 
     if (value === 'IDK') {
@@ -200,11 +215,19 @@ function handleCartCount(value) {
     const cartMore = document.getElementById('cartMore');
     const businessFollowUp = document.getElementById('businessFollowUp');
     const nonComplianceMessage = document.getElementById('nonComplianceMessage');
+    const complianceDeadlineMessageLarge = document.getElementById('complianceDeadlineMessageLarge');
+    const complianceDeadlineMessageMedium = document.getElementById('complianceDeadlineMessageMedium');
+    const complianceDeadlineMessageSmall = document.getElementById('complianceDeadlineMessageSmall');
 
     cartOne.classList.add('hidden');
     cartMore.classList.add('hidden');
     businessFollowUp.classList.add('hidden');
     nonComplianceMessage.classList.add('hidden');
+    complianceDeadlineMessageLarge.classList.add('hidden');
+    complianceDeadlineMessageMedium.classList.add('hidden');
+    complianceDeadlineMessageSmall.classList.add('hidden');
+
+    resetRadio();
 
     if (value === 'IDK') {
         // show the business follow up question if user selects "I don't know."
@@ -260,4 +283,15 @@ function handleBusinesses(value) {
     } else if (value === 'no') {
         nonComplianceMessage.classList.remove('hidden');
     }
+}
+
+// function to reset selections when hidden
+function resetRadio() {
+    var questionDivs = document.querySelectorAll('.question.hidden');
+    questionDivs.forEach(function(d) {
+        var radios = d.querySelectorAll('input[type="radio"]');
+        radios.forEach(function(radio) {
+            radio.checked = false;
+        });
+    });
 }
