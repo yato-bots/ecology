@@ -28,9 +28,12 @@ const businessTypeFollowUp = {
     "Correctional Facility": "Does your correctional facility have over 50 incarcerated individuals?"
 }
 
+let previous_ZipCode = '';
+
 // Function to validate zip code and show/hide questions based on the zip code input
 function validateZipCode() {
-    const zipInput = document.getElementById('zip').value;
+    // const zipInput = zipCode;
+    const zipInput = document.getElementById('zip').value.trim();
     const zipError = document.getElementById('zipError');
     const partialMessage = document.getElementById('partialMessage');
     const noComplianceMessage = document.getElementById('noComplianceMessage');
@@ -44,6 +47,20 @@ function validateZipCode() {
     noComplianceMessage.classList.add('hidden');
     partialMessage.classList.add('hidden');
     question2.classList.add('hidden');
+
+    // Restart the form when the zip code is changed
+    if(previous_ZipCode != zipInput && previous_ZipCode != '') {
+        question2.classList.add('hidden');
+        document.getElementById('businessType').value = '';
+        document.getElementById('question3').classList.add('hidden');
+        document.getElementById('question4').classList.add('hidden');
+        document.getElementById('businessFollowUp').classList.add('hidden');
+        document.getElementById('complianceDeadlineMessageLarge').classList.add('hidden');
+        document.getElementById('complianceDeadlineMessageMedium').classList.add('hidden');
+        document.getElementById('complianceDeadlineMessageSmall').classList.add('hidden');
+        document.getElementById('nonComplianceMessage').classList.add('hidden');
+    }
+    previous_ZipCode = zipInput;
 
     // Check if zip code is valid
     if (zipYes.includes(zipInput) || zipNo.includes(zipInput) || zipPartial.includes(zipInput)) {
@@ -74,6 +91,8 @@ function showQuestion3() {
     }
 }
 
+let previous_question3_answer = '';
+
 // function to handle Question 3 responses
 function handleWasteVolumeSelection(value) {
     const zipInput = document.getElementById('zip').value;
@@ -96,7 +115,12 @@ function handleWasteVolumeSelection(value) {
 
     resetRadio();
 
+    if(previous_question3_answer != value && previous_question3_answer != '') {
+        document.getElementById('nonComplianceMessage').classList.add('hidden');
+    }
 
+    previous_question3_answer = value;
+    
     if (value === 'IDK') {
         // show Question 4 if user selects "I don't know."
         question4.classList.remove('hidden');
