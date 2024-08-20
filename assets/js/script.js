@@ -3,79 +3,14 @@ const zipYes = ['98001', '98002', '98003', '98004', '98005', '98006', '98007', '
 const zipNo = ['98024', '98068', '98070', '98220', '98224', '98235', '98236', '98237', '98237', '98238', '98239', '98244', '98247', '98249', '98251', '98251', '98253', '98255', '98256', '98260', '98262', '98263', '98266', '98267', '98267', '98276', '98277', '98278', '98281', '98283', '98283', '98288', '98295', '98303', '98304', '98323', '98328', '98330', '98333', '98349', '98351', '98394', '98823', '98832', '98837', '98851', '98853', '98857', '98860', '99103', '99115', '99123', '99135', '99321', '99344', '99349', '99357', '00072']
 const zipPartial = ['98221', '98226', '98230', '98240', '98248', '98264', '98284', '98284', '98531', '98579']
 
-// function to validate zip code and show questions 2 and 3
-function validateZipCode() {
-    const zipInput = document.getElementById('zip').value.trim();
-    const zipError = document.getElementById('zipError');
-    const isZipValid = zipYes.includes(zipInput) || zipNo.includes(zipInput) || zipPartial.includes(zipInput);
-    
-    // check if zip code is valid
-    if (isZipValid) {
-        zipError.classList.add('hidden');
-
-        // show or hide questions based on zip code input
-        if (zipYes.includes(zipInput)) {
-            zipError.classList.add('hidden');
-            document.getElementById('noComplianceMessage').classList.add('hidden');
-            document.getElementById('partialMessage').classList.add('hidden');
-            document.getElementById('question2').classList.remove('hidden');
-            document.getElementById('question3').classList.remove('hidden');
-        } else if (zipNo.includes(zipInput)) {
-            zipError.classList.add('hidden');
-            document.getElementById('noComplianceMessage').classList.remove('hidden');
-            document.getElementById('partialMessage').classList.add('hidden');
-            document.getElementById('question2').classList.add('hidden');
-            document.getElementById('question3').classList.add('hidden');               
-        } else if (zipPartial.includes(zipInput)) {
-            zipError.classList.add('hidden');
-            document.getElementById('noComplianceMessage').classList.add('hidden');
-            document.getElementById('partialMessage').classList.remove('hidden');
-            document.getElementById('question2').classList.add('hidden');
-            document.getElementById('question3').classList.add('hidden');
-        }
-    } else {
-        // show error message if zip code is invalid
-        zipError.classList.remove('hidden');
-        document.getElementById('noComplianceMessage').classList.add('hidden');
-        document.getElementById('partialMessage').classList.add('hidden');
-        document.getElementById('question2').classList.add('hidden');
-        document.getElementById('question3').classList.add('hidden');
-    }
-}
-
-// function to handle Question 3 responses
-function handleWasteVolumeSelection(value) {
-    const question4 = document.getElementById('question4');
-    const complianceDeadlineMessageLarge = document.getElementById('complianceDeadlineMessageLarge');
-    const complianceDeadlineMessageMedium = document.getElementById('complianceDeadlineMessageMedium');
-    const complianceDeadlineMessageSmall = document.getElementById('complianceDeadlineMessageSmall');
-
-    complianceDeadlineMessageLarge.classList.add('hidden');
-    complianceDeadlineMessageMedium.classList.add('hidden');
-    complianceDeadlineMessageSmall.classList.add('hidden');
-
-    if (value === 'IDK') {
-        // show Question 4 if user selects "I don't know."
-        question4.classList.remove('hidden');
-    } else {
-        // hide Question 4 and show compliance deadline message
-        question4.classList.add('hidden');
-        // show relevant deadline message
-        switch(value) {
-            case 'large':
-                complianceDeadlineMessageLarge.classList.remove('hidden');
-                break;
-            case 'medium':
-                complianceDeadlineMessageMedium.classList.remove('hidden');
-                break;
-            case 'small':
-                complianceDeadlineMessageSmall.classList.remove('hidden');
-                break;
-            default:
-                break;
-        }
-    }
-}
+const zipToUrlPartial = {
+    "98221": "https://www.anacorteswa.gov/",
+    "98230": "https://www.ci.blaine.wa.us/",
+    "98531": "https://www.cityofcentralia.com/",
+    "98248": "https://www.cityofferndale.org/",
+    "98264": "https://www.lyndenwa.org/",
+    "98284": "https://www.sedro-woolley.gov/"
+};
 
 // for business follow up questions
 const businessTypeFollowUp = {
@@ -93,6 +28,124 @@ const businessTypeFollowUp = {
     "Correctional Facility": "Does your correctional facility have over 50 incarcerated individuals?"
 }
 
+let previous_ZipCode = '';
+
+// Function to validate zip code and show/hide questions based on the zip code input
+function validateZipCode() {
+    const zipInput = document.getElementById('zip').value.trim();
+    const zipError = document.getElementById('zipError');
+    const partialMessage = document.getElementById('partialMessage');
+    const noComplianceMessage = document.getElementById('noComplianceMessage');
+    const partialLink = document.getElementById('partialLink');
+    
+    // Define questions
+    const question2 = document.getElementById('question2');
+    
+    // Hide all messages and questions initially
+    zipError.classList.add('hidden');
+    noComplianceMessage.classList.add('hidden');
+    partialMessage.classList.add('hidden');
+    question2.classList.add('hidden');
+
+    // Restart the form when the zip code is changed
+    if(previous_ZipCode != zipInput && previous_ZipCode != '') {
+        question2.classList.add('hidden');
+        document.getElementById('businessType').value = '';
+        document.getElementById('question3').classList.add('hidden');
+        document.getElementById('question4').classList.add('hidden');
+        document.getElementById('businessFollowUp').classList.add('hidden');
+        document.getElementById('complianceDeadlineMessageLarge').classList.add('hidden');
+        document.getElementById('complianceDeadlineMessageMedium').classList.add('hidden');
+        document.getElementById('complianceDeadlineMessageSmall').classList.add('hidden');
+        document.getElementById('nonComplianceMessage').classList.add('hidden');
+    }
+    previous_ZipCode = zipInput;
+
+    // Check if zip code is valid
+    if (zipYes.includes(zipInput) || zipNo.includes(zipInput) || zipPartial.includes(zipInput)) {
+        // Determine visibility of messages and questions based on zip code input
+        if (zipYes.includes(zipInput)) {
+            question2.classList.remove('hidden');
+        } else if (zipNo.includes(zipInput)) {
+            noComplianceMessage.classList.remove('hidden');
+        } else if (zipPartial.includes(zipInput)) {
+            partialMessage.classList.remove('hidden');
+            partialLink.href = zipToUrlPartial[zipInput] || '#'; // Set the URL if available
+        }
+    } else {
+        // Show error message if zip code is invalid
+        zipError.classList.remove('hidden');
+    }
+}
+
+// function to show Question 3 when Question 2 is answered
+function showQuestion3() {
+    const businessType = document.getElementById('businessType').value;
+    const question3 = document.getElementById('question3');
+
+    question3.classList.add('hidden');
+
+    if (businessType !== "") {
+        question3.classList.remove('hidden');
+    }
+}
+
+let previous_question3_answer = '';
+
+// function to handle Question 3 responses
+function handleWasteVolumeSelection(value) {
+    const zipInput = document.getElementById('zip').value;
+    const question4 = document.getElementById('question4');
+    const complianceDeadlineMessageLarge = document.getElementById('complianceDeadlineMessageLarge');
+    const complianceDeadlineMessageMedium = document.getElementById('complianceDeadlineMessageMedium');
+    const complianceDeadlineMessageSmall = document.getElementById('complianceDeadlineMessageSmall');
+    const complianceUrl = document.getElementById('complianceUrl')
+    const cartOne = document.getElementById('cartOne');
+    const cartMore = document.getElementById('cartMore');
+    const businessFollowUp = document.getElementById('businessFollowUp');
+
+    cartOne.classList.add('hidden');
+    cartMore.classList.add('hidden');
+    businessFollowUp.classList.add('hidden');
+    complianceDeadlineMessageLarge.classList.add('hidden');
+    complianceDeadlineMessageMedium.classList.add('hidden');
+    complianceDeadlineMessageSmall.classList.add('hidden');
+    complianceUrl.href = '#'
+
+    resetRadio();
+
+    if(previous_question3_answer != value && previous_question3_answer != '') {
+        document.getElementById('nonComplianceMessage').classList.add('hidden');
+    }
+
+    previous_question3_answer = value;
+    
+    if (value === 'IDK') {
+        // show Question 4 if user selects "I don't know."
+        question4.classList.remove('hidden');
+    } else {
+        // hide Question 4 and show compliance deadline message
+        question4.classList.add('hidden');
+        // show relevant deadline message
+        switch(value) {
+            case 'large':
+                complianceDeadlineMessageLarge.classList.remove('hidden');
+                complianceUrl.href = zipToUrlYes[zipInput] || '#';
+                break;
+            case 'medium':
+                complianceDeadlineMessageMedium.classList.remove('hidden');
+                complianceUrl.href = zipToUrlYes[zipInput] || '#';
+                break;
+            case 'small':
+                complianceDeadlineMessageSmall.classList.remove('hidden');
+                complianceUrl.href = zipToUrlYes[zipInput] || '#';
+                break;
+            default:
+                break;
+        }
+    }
+}
+
 // function to update business-specific follow-up questions based on business type
 function updateBusinessFollowUpQuestion(businessType) {
     const businessTypeFollowUpElement = document.getElementById('businessTypeFollowUp');
@@ -108,11 +161,19 @@ function handleCartCount(value) {
     const cartMore = document.getElementById('cartMore');
     const businessFollowUp = document.getElementById('businessFollowUp');
     const nonComplianceMessage = document.getElementById('nonComplianceMessage');
+    const complianceDeadlineMessageLarge = document.getElementById('complianceDeadlineMessageLarge');
+    const complianceDeadlineMessageMedium = document.getElementById('complianceDeadlineMessageMedium');
+    const complianceDeadlineMessageSmall = document.getElementById('complianceDeadlineMessageSmall');
 
     cartOne.classList.add('hidden');
     cartMore.classList.add('hidden');
     businessFollowUp.classList.add('hidden');
     nonComplianceMessage.classList.add('hidden');
+    complianceDeadlineMessageLarge.classList.add('hidden');
+    complianceDeadlineMessageMedium.classList.add('hidden');
+    complianceDeadlineMessageSmall.classList.add('hidden');
+
+    resetRadio();
 
     if (value === 'IDK') {
         // show the business follow up question if user selects "I don't know."
@@ -129,18 +190,23 @@ function handleCartCount(value) {
 
 // function to handle compliance messages for cartOne and cartMore
 function handleCarts(value) {
+    const zipInput = document.getElementById('zip').value;
     const complianceDeadlineMessageMedium = document.getElementById('complianceDeadlineMessageMedium');
     const nonComplianceMessage = document.getElementById('nonComplianceMessage');
+    const complianceUrl = document.getElementById('complianceUrl');
     
+    complianceUrl.href = '#'
     complianceDeadlineMessageMedium.classList.add('hidden');
     nonComplianceMessage.classList.add('hidden');
 
     if (value === '100') {
         complianceDeadlineMessageMedium.classList.remove('hidden');
+        complianceUrl.href = zipToUrlYes[zipInput] || '#';
     } else if (value === '75') {
         nonComplianceMessage.classList.remove('hidden');
     } else if (value === '50') {
         complianceDeadlineMessageMedium.classList.remove('hidden');
+        complianceUrl.href = zipToUrlYes[zipInput] || '#';
     } else if (value === '25') {
         nonComplianceMessage.classList.remove('hidden');
     }
@@ -148,15 +214,30 @@ function handleCarts(value) {
 
 // function to handle business-specific follow up questions
 function handleBusinesses(value) {
+    const zipInput = document.getElementById('zip').value;
     const complianceDeadlineMessageMedium = document.getElementById('complianceDeadlineMessageMedium');
     const nonComplianceMessage = document.getElementById('nonComplianceMessage');
+    const complianceUrl = document.getElementById('complianceUrl');
 
+    complianceUrl.href = '#'
     complianceDeadlineMessageMedium.classList.add('hidden');
     nonComplianceMessage.classList.add('hidden');
 
     if (value === 'yes') {
         complianceDeadlineMessageMedium.classList.remove('hidden');
+        complianceUrl.href = zipToUrlYes[zipInput] || '#';
     } else if (value === 'no') {
         nonComplianceMessage.classList.remove('hidden');
     }
+}
+
+// function to reset selections when hidden
+function resetRadio() {
+    var questionDivs = document.querySelectorAll('.question.hidden');
+    questionDivs.forEach(function(d) {
+        var radios = d.querySelectorAll('input[type="radio"]');
+        radios.forEach(function(radio) {
+            radio.checked = false;
+        });
+    });
 }
