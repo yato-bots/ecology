@@ -54,6 +54,8 @@ function validateZipCode() {
         document.getElementById('businessType').value = '';
         document.getElementById('question3').classList.add('hidden');
         document.getElementById('question4').classList.add('hidden');
+        document.getElementById('cartMore').classList.add('hidden');
+        document.getElementById('cartOne').classList.add('hidden');
         document.getElementById('businessFollowUp').classList.add('hidden');
         document.getElementById('complianceDeadlineMessageLarge').classList.add('hidden');
         document.getElementById('complianceDeadlineMessageMedium').classList.add('hidden');
