@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Waste Compliance Estimator</title>
+    <link rel="icon" href="assets/image/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <div class="quiz-container">
+        <a href="https://ecology.wa.gov/"><img class="logo" src="assets/image/ecology_logo_horizontal.png"/></a>
+        <h1>Organic Waste Compliance Estimator</h1>
+        <form id="quizForm">
+            
+            <!-- Question 1: Zip Code -->
+            <div id="question1" class="question">
+                <h2>What is your zip code?</h2>
+                <label for="zip">Enter your zip code:</label>
+                <input type="text" id="zip" name="zip" oninput="validateZipCode()">
+                <p id="zipError" class="error hidden">Invalid zip code. Please enter a valid zip code.</p>
+                <p id="noComplianceMessage" class="info hidden">Based on the zip code you provided, you do not need to comply with regulations.</p>
+                <p id="partialMessage" class="info hidden">Your zip code is partially affected. Please consult this <a href="https://ecology.wa.gov/waste-toxics/reducing-recycling-waste/organics-and-food-waste/2022-organics-management-law/organics-management-for-businesses" target="_blank">BOMA Map</a> and <a id="partialLink" href="#" target='_blank'>your local government's website</a> for more details.</p>
+            </div>
+
+            <!-- Question 2: Business Type -->
+            <div id="question2" class="question hidden">
+                <h2>Your business is best described as:</h2>
+                <select name="businessType" id="businessType" onchange="updateBusinessFollowUpQuestion(this.value); showQuestion3()">
+                    <option value="" disabled selected>Select one</option>
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="Grocery, Speciality Foods, and/or Convenience Store">Grocery, Speciality Foods, and/or Convenience Store</option>
+                    <option value="Food Wholesaler, Distributor, or Manufacturer">Food Wholesaler, Distributor, or Manufacturer</option>
+                    <option value="Lodging or Hotel">Lodging or Hotel</option>
+                    <option value="Hospital">Hospital</option>
+                    <option value="Sports or Event Venue">Sports or Event Venue </option>
+                    <option value="Supercenter">Supercenter</option>
+                    <option value="Nursing or Residential Care Facility">Nursing or Residential Care Facility</option>
+                    <option value="Office Building with Dining Service">Office Building with Dining Service</option>
+                    <option value="College or University (Residential)">College or University (Residential)</option>
+                    <option value="College or University (Non-Residential)">College or University (Non-Residential)</option>
+                    <option value="Correctional Facility">Correctional Facility</option>                    
+                </select>
+                <p id="businessError" class="error hidden">Please select a business type.</p>
+            </div>
+
+            <!-- Question 3: Waste Volume -->
+            <div id="question3" class="question hidden">
+                <h2>Approximately how much organic waste does your business produce per week?</h2>
+                <label><input type="radio" name="wasteVolume" value="large" onclick="handleWasteVolumeSelection('large')">8 Cubic Yards</label>
+                <label><input type="radio" name="wasteVolume" value="medium" onclick="handleWasteVolumeSelection('medium')">4 Cubic Yards</label>
+                <label><input type="radio" name="wasteVolume" value="small" onclick="handleWasteVolumeSelection('small')">96 Gallons</label>
+                <label><input type="radio" name="wasteVolume" value="IDK" onclick="handleWasteVolumeSelection('IDK')">I don't know.</label>
+            </div>
+
+            <!-- Question 4: Waste Volume if Q3 = IDK -->
+            <div id="question4" class="question hidden">
+                <h2>Which statement applies to you?</h2>
+                <label><input type="radio" name="cartCount" value="one" onclick="handleCartCount('one')">I have one 96-gallon garbage cart that is picked up once a week.</label>
+                <label><input type="radio" name="cartCount" value="more" onclick="handleCartCount('more')">I have more than one 96-gallon garbage cart that is picked up once a week.</label>
+                <label><input type="radio" name="cartCount" value="IDK" onclick="handleCartCount('IDK')">I don't know.</label>
+            </div>
+
+            <!-- Question 5: Follow Up if Q4 = one -->
+            <div id="cartOne" class="question hidden">
+                <h2>How much of your garbage cart is food waste?</h2>
+                    <label><input type="radio" name="cartOne" value="100" onclick="handleCarts('100')">100% of the bin is food waste.</label>
+                    <label><input type="radio" name="cartOne" value="75" onclick="handleCarts('75')">75% or less of the bin is food waste.</label>
+            </div>
+
+            <!-- Question 5: Follow Up if Q4 = more -->
+            <div id="cartMore" class="question hidden">
+                <h2>How much of your garbage cart is food waste?</h2>
+                    <label><input type="radio" name="cartMore" value="50" onclick="handleCarts('50')">50% or more of the bin is food waste.</label>
+                    <label><input type="radio" name="cartMore" value="25" onclick="handleCarts('25')">25% or less of the bin is food waste.</label>
+            </div>
+
+            <!-- Question 5: Follow Up if Q4 = IDK -->
+            <div id="businessFollowUp" class="question hidden" onchange="updateBusinessFollowUpQuestion(this.value)">
+                <h2 id="businessTypeFollowUp"></h2>
+                <label><input type="radio" name="businessAnswer" value="yes" onclick="handleBusinesses('yes')">Yes</label>
+                <label><input type="radio" name="businessAnswer" value="no" onclick="handleBusinesses('no')">No</label>
+            </div>
+
+            <!-- Compliance Deadline Messages -->
+            <div id="complianceDeadlineMessageLarge" class="info hidden">
+                <h2>Based on the information provided, you may need to comply by 2027.</h2>
+                <p>Please consult your local government's <a id="complianceUrl" href="#" target="_blank">website</a> for more information.</p>
+            </div>
+            <div id="complianceDeadlineMessageMedium" class="info hidden">
+                <h2>Based on the information provided, you may need to comply by 2026.</h2>
+                <p>Please consult your local government's <a id="complianceUrl" href="#" target="_blank">website</a> for more information.</p>
+            </div>
+            <div id="complianceDeadlineMessageSmall" class="info hidden">
+                <h2>Based on the information provided, you may need to comply by 2025.</h2>
+                <p>Please consult your local government's <a id="complianceUrl" href="#" target="_blank">website</a> for more information.</p>
+            </div>
+            <div id="nonComplianceMessage" class="info hidden">
+                <h2>Based on the information provided, you may not need to comply.</h2>
+            </div>
+        </form>
+    </div>
+    <div class="contact">
+        <p>Please email us at <a href="mailto:organics@ecy.wa.gov">organics@ecy.wa.gov</a> or call us at <a href="tel:509-960-1290">509-960-1290</a> if you need any technical assistance or would like to set up a virtual chat with Ecology.</p>
+    </div>
+</body>
+</html>
