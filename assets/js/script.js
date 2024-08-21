@@ -32,7 +32,7 @@ let previous_ZipCode = '';
 
 // Function to validate zip code and show/hide questions based on the zip code input
 function validateZipCode() {
-    // const zipInput = zipCode;
+    const zipInput = zipCode;
     const zipInput = document.getElementById('zip').value.trim();
     const zipError = document.getElementById('zipError');
     const partialMessage = document.getElementById('partialMessage');
