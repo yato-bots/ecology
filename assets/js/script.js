@@ -59,6 +59,7 @@ function validateZipCode() {
         document.getElementById('complianceDeadlineMessageMedium').classList.add('hidden');
         document.getElementById('complianceDeadlineMessageSmall').classList.add('hidden');
         document.getElementById('nonComplianceMessage').classList.add('hidden');
+        resetRadio();
     }
     previous_ZipCode = zipInput;
 
