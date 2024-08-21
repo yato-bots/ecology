@@ -1,0 +1,1407 @@
+[
+    {
+        "City": "Aberdeen",
+        "Zip Code": "98520",
+        "Website": "https://www.aberdeenwa.gov/"
+    },
+    {
+        "City": "Airway Heights",
+        "Zip Code": "99001",
+        "Website": "https://cawh.org/"
+    },
+    {
+        "City": "Albion",
+        "Zip Code": "99102",
+        "Website": ""
+    },
+    {
+        "City": "Algona",
+        "Zip Code": "98001",
+        "Website": "https://www.algonawa.gov/"
+    },
+    {
+        "City": "Almira",
+        "Zip Code": "99103",
+        "Website": "http://www.almirawashington.com/"
+    },
+    {
+        "City": "Anacortes",
+        "Zip Code": "98221-0547",
+        "Website": "https://www.anacorteswa.gov/"
+    },
+    {
+        "City": "Arlington",
+        "Zip Code": "98223",
+        "Website": "https://www.arlingtonwa.gov/"
+    },
+    {
+        "City": "Asotin",
+        "Zip Code": "99402",
+        "Website": "https://cityofasotin.org/"
+    },
+    {
+        "City": "Auburn",
+        "Zip Code": "98001-4998",
+        "Website": "https://www.auburnwa.gov/"
+    },
+    {
+        "City": "Bainbridge Island",
+        "Zip Code": "98110-1812",
+        "Website": "https://www.bainbridgewa.gov/"
+    },
+    {
+        "City": "Battle Ground",
+        "Zip Code": "98604",
+        "Website": "https://www.cityofbg.org/"
+    },
+    {
+        "City": "Beaux Arts Village",
+        "Zip Code": "98004",
+        "Website": "https://www.beauxarts-wa.gov/"
+    },
+    {
+        "City": "Bellevue",
+        "Zip Code": "98009-9012",
+        "Website": "https://bellevuewa.gov/"
+    },
+    {
+        "City": "Bellingham",
+        "Zip Code": "98225",
+        "Website": "https://cob.org/"
+    },
+    {
+        "City": "Benton City",
+        "Zip Code": "99320",
+        "Website": "https://www.ci.benton-city.wa.us/"
+    },
+    {
+        "City": "Bingen",
+        "Zip Code": "98605",
+        "Website": "https://www.bingenwashington.org/"
+    },
+    {
+        "City": "Black Diamond",
+        "Zip Code": "98010",
+        "Website": "https://www.blackdiamondwa.gov/"
+    },
+    {
+        "City": "Blaine",
+        "Zip Code": "98230",
+        "Website": "https://www.ci.blaine.wa.us/"
+    },
+    {
+        "City": "Bonney Lake",
+        "Zip Code": "98391-0944",
+        "Website": "https://www.ci.bonney-lake.wa.us/"
+    },
+    {
+        "City": "Bothell",
+        "Zip Code": "98011",
+        "Website": "https://www.bothellwa.gov/"
+    },
+    {
+        "City": "Bremerton",
+        "Zip Code": "98337-1891",
+        "Website": "https://www.bremertonwa.gov/"
+    },
+    {
+        "City": "Brewster",
+        "Zip Code": "98812",
+        "Website": "https://www.cityofbrewsterwashington.org/"
+    },
+    {
+        "City": "Bridgeport",
+        "Zip Code": "98813",
+        "Website": "https://bridgeportwashington.net/"
+    },
+    {
+        "City": "Brier",
+        "Zip Code": "98036",
+        "Website": "http://www.ci.brier.wa.us/"
+    },
+    {
+        "City": "Buckley",
+        "Zip Code": "98321",
+        "Website": "https://www.cityofbuckley.com/"
+    },
+    {
+        "City": "Bucoda",
+        "Zip Code": "98530-0010",
+        "Website": "https://www.bucoda.us/"
+    },
+    {
+        "City": "Burien",
+        "Zip Code": "98166",
+        "Website": "https://www.burienwa.gov/"
+    },
+    {
+        "City": "Burlington",
+        "Zip Code": "98233",
+        "Website": "https://burlingtonwa.gov/"
+    },
+    {
+        "City": "Camas",
+        "Zip Code": "98607",
+        "Website": "https://www.cityofcamas.us/"
+    },
+    {
+        "City": "Carbonado",
+        "Zip Code": "98323",
+        "Website": "https://www.carbonado.org/"
+    },
+    {
+        "City": "Carnation",
+        "Zip Code": "98014-1238",
+        "Website": "https://www.carnationwa.gov/"
+    },
+    {
+        "City": "Cashmere",
+        "Zip Code": "98815-1034",
+        "Website": "https://www.cityofcashmere.org/"
+    },
+    {
+        "City": "Castle Rock",
+        "Zip Code": "98611",
+        "Website": "https://ci.castle-rock.wa.us/"
+    },
+    {
+        "City": "Cathlamet",
+        "Zip Code": "98612",
+        "Website": "https://www.townofcathlamet.com/"
+    },
+    {
+        "City": "Centralia",
+        "Zip Code": "98531",
+        "Website": "https://www.cityofcentralia.com/"
+    },
+    {
+        "City": "Chehalis",
+        "Zip Code": "98532",
+        "Website": "https://www.ci.chehalis.wa.us/"
+    },
+    {
+        "City": "Chelan",
+        "Zip Code": "98816",
+        "Website": "https://cityofchelan.us/"
+    },
+    {
+        "City": "Cheney",
+        "Zip Code": "99004",
+        "Website": "https://www.cityofcheney.org/"
+    },
+    {
+        "City": "Chewelah",
+        "Zip Code": "99109-0258",
+        "Website": "https://www.cityofchewelah.org/"
+    },
+    {
+        "City": "Clarkston",
+        "Zip Code": "99403-2633",
+        "Website": "https://clarkston-wa.com/"
+    },
+    {
+        "City": "Cle Elum",
+        "Zip Code": "98922",
+        "Website": "https://cleelum.gov/"
+    },
+    {
+        "City": "Clyde Hill",
+        "Zip Code": "98004",
+        "Website": "https://www.clydehill.org/"
+    },
+    {
+        "City": "Colfax",
+        "Zip Code": "99111",
+        "Website": "https://www.colfaxwa.org/"
+    },
+    {
+        "City": "College Place",
+        "Zip Code": "99324",
+        "Website": "https://www.cpwa.us/"
+    },
+    {
+        "City": "Colton",
+        "Zip Code": "99113",
+        "Website": "http://www.coltonwashington.us/"
+    },
+    {
+        "City": "Colville",
+        "Zip Code": "99114",
+        "Website": "https://www.colville.wa.us/"
+    },
+    {
+        "City": "Conconully",
+        "Zip Code": "98819",
+        "Website": "http://townofconconully.com/"
+    },
+    {
+        "City": "Concrete",
+        "Zip Code": "98237",
+        "Website": "https://www.townofconcrete.com/"
+    },
+    {
+        "City": "Connell",
+        "Zip Code": "99326-1200",
+        "Website": "https://www.cityofconnell.com/"
+    },
+    {
+        "City": "Cosmopolis",
+        "Zip Code": "98537",
+        "Website": "https://www.cosmopoliswa.gov/"
+    },
+    {
+        "City": "Coulee City",
+        "Zip Code": "99115",
+        "Website": "https://couleecitywa.org/"
+    },
+    {
+        "City": "Coulee Dam",
+        "Zip Code": "99116",
+        "Website": "https://townofcouleedam.org/"
+    },
+    {
+        "City": "Coupeville",
+        "Zip Code": "98239",
+        "Website": "https://townofcoupeville.org/"
+    },
+    {
+        "City": "Covington",
+        "Zip Code": "98042",
+        "Website": "https://www.covingtonwa.gov/"
+    },
+    {
+        "City": "Creston",
+        "Zip Code": "99117",
+        "Website": ""
+    },
+    {
+        "City": "Cusick",
+        "Zip Code": "99119",
+        "Website": "https://www.townofcusick.com/"
+    },
+    {
+        "City": "Darrington",
+        "Zip Code": "98241",
+        "Website": "https://townofdarrington.com/"
+    },
+    {
+        "City": "Davenport",
+        "Zip Code": "99122",
+        "Website": "https://www.davenportwa.us/"
+    },
+    {
+        "City": "Dayton",
+        "Zip Code": "99328",
+        "Website": "https://www.daytonwa.com/"
+    },
+    {
+        "City": "Deer Park",
+        "Zip Code": "99006",
+        "Website": "https://www.cityofdeerparkwa.com/"
+    },
+    {
+        "City": "Des Moines",
+        "Zip Code": "98198",
+        "Website": "https://www.desmoineswa.gov/"
+    },
+    {
+        "City": "DuPont",
+        "Zip Code": "98327",
+        "Website": "https://www.dupontwa.gov/"
+    },
+    {
+        "City": "Duvall",
+        "Zip Code": "98019",
+        "Website": "https://www.duvallwa.gov/"
+    },
+    {
+        "City": "East Wenatchee",
+        "Zip Code": "98802",
+        "Website": "https://www.eastwenatcheewa.gov/"
+    },
+    {
+        "City": "Eatonville",
+        "Zip Code": "98328",
+        "Website": "https://eatonville-wa.gov/"
+    },
+    {
+        "City": "Edgewood",
+        "Zip Code": "98372",
+        "Website": "https://www.cityofedgewood.org/"
+    },
+    {
+        "City": "Edmonds",
+        "Zip Code": "98020",
+        "Website": "https://www.edmondswa.gov/"
+    },
+    {
+        "City": "Electric City",
+        "Zip Code": "99123",
+        "Website": "https://www.electriccity.us/"
+    },
+    {
+        "City": "Ellensburg",
+        "Zip Code": "98926",
+        "Website": "https://ci.ellensburg.wa.us/"
+    },
+    {
+        "City": "Elma",
+        "Zip Code": "98541",
+        "Website": "https://cityofelma.com/"
+    },
+    {
+        "City": "Elmer City",
+        "Zip Code": "99124",
+        "Website": "https://www.townofelmercity.com/"
+    },
+    {
+        "City": "Endicott",
+        "Zip Code": "99125",
+        "Website": "https://endicottwa.wordpress.com/"
+    },
+    {
+        "City": "Entiat",
+        "Zip Code": "98822",
+        "Website": "https://www.entiatwa.us/"
+    },
+    {
+        "City": "Enumclaw",
+        "Zip Code": "98022-3091",
+        "Website": "https://www.cityofenumclaw.net/"
+    },
+    {
+        "City": "Ephrata",
+        "Zip Code": "98823",
+        "Website": "https://www.ephrata.org/"
+    },
+    {
+        "City": "Everett",
+        "Zip Code": "98201",
+        "Website": "https://everettwa.gov/"
+    },
+    {
+        "City": "Everson",
+        "Zip Code": "98247",
+        "Website": "https://www.ci.everson.wa.us/"
+    },
+    {
+        "City": "Fairfield",
+        "Zip Code": "99012",
+        "Website": "https://fairfieldwa.com/"
+    },
+    {
+        "City": "Farmington",
+        "Zip Code": "99128",
+        "Website": "https://farmingtonwa.com/"
+    },
+    {
+        "City": "Federal Way",
+        "Zip Code": "98003-6325",
+        "Website": "https://www.federalwaywa.gov/"
+    },
+    {
+        "City": "Ferndale",
+        "Zip Code": "98248",
+        "Website": "https://www.cityofferndale.org/"
+    },
+    {
+        "City": "Fife",
+        "Zip Code": "98424",
+        "Website": "https://www.cityoffife.org/"
+    },
+    {
+        "City": "Fircrest",
+        "Zip Code": "98466",
+        "Website": "https://www.cityoffircrest.net/"
+    },
+    {
+        "City": "Forks",
+        "Zip Code": "98331",
+        "Website": "https://forkswashington.org/"
+    },
+    {
+        "City": "Friday Harbor",
+        "Zip Code": "98250",
+        "Website": "http://www.fridayharbor.org/"
+    },
+    {
+        "City": "Garfield",
+        "Zip Code": "99130",
+        "Website": "https://garfieldwa.com/"
+    },
+    {
+        "City": "George",
+        "Zip Code": "98824",
+        "Website": "http://www.cityofgeorge.org/"
+    },
+    {
+        "City": "Gig Harbor",
+        "Zip Code": "98335",
+        "Website": "https://www.gigharborwa.gov/"
+    },
+    {
+        "City": "Gold Bar",
+        "Zip Code": "98251",
+        "Website": "https://cityofgoldbar.us/"
+    },
+    {
+        "City": "Goldendale",
+        "Zip Code": "98620",
+        "Website": "https://www.ci.goldendale.wa.us/"
+    },
+    {
+        "City": "Grand Coulee",
+        "Zip Code": "99133-0180",
+        "Website": "https://gccitywa.org/"
+    },
+    {
+        "City": "Grandview",
+        "Zip Code": "98930",
+        "Website": "https://www.grandview.wa.us/"
+    },
+    {
+        "City": "Granger",
+        "Zip Code": "98932",
+        "Website": "https://www.grangerwashington.org/"
+    },
+    {
+        "City": "Granite Falls",
+        "Zip Code": "98252",
+        "Website": "https://ci.granite-falls.wa.us/"
+    },
+    {
+        "City": "Hamilton",
+        "Zip Code": "98255",
+        "Website": "https://www.townofhamiltonwa.com/"
+    },
+    {
+        "City": "Harrah",
+        "Zip Code": "98933-0010",
+        "Website": ""
+    },
+    {
+        "City": "Harrington",
+        "Zip Code": "99134",
+        "Website": ""
+    },
+    {
+        "City": "Hartline",
+        "Zip Code": "99135",
+        "Website": ""
+    },
+    {
+        "City": "Hatton",
+        "Zip Code": "99344-9494",
+        "Website": ""
+    },
+    {
+        "City": "Hoquiam",
+        "Zip Code": "98550",
+        "Website": "https://cityofhoquiam.com/"
+    },
+    {
+        "City": "Hunts Point",
+        "Zip Code": "98004",
+        "Website": "https://huntspoint-wa.gov/"
+    },
+    {
+        "City": "Ilwaco",
+        "Zip Code": "98624",
+        "Website": "https://ilwaco-wa.gov/"
+    },
+    {
+        "City": "Index",
+        "Zip Code": "98256",
+        "Website": ""
+    },
+    {
+        "City": "Ione",
+        "Zip Code": "99139",
+        "Website": ""
+    },
+    {
+        "City": "Issaquah",
+        "Zip Code": "98027-1307",
+        "Website": "https://www.issaquahwa.gov/"
+    },
+    {
+        "City": "Kahlotus",
+        "Zip Code": "99335",
+        "Website": ""
+    },
+    {
+        "City": "Kalama",
+        "Zip Code": "98625",
+        "Website": "https://www.cityofkalama.com/"
+    },
+    {
+        "City": "Kelso",
+        "Zip Code": "98626",
+        "Website": "https://www.kelso.gov/"
+    },
+    {
+        "City": "Kenmore",
+        "Zip Code": "98028",
+        "Website": "https://www.kenmorewa.gov/"
+    },
+    {
+        "City": "Kennewick",
+        "Zip Code": "99336",
+        "Website": "https://www.go2kennewick.com/"
+    },
+    {
+        "City": "Kent",
+        "Zip Code": "98032",
+        "Website": "https://www.kentwa.gov/"
+    },
+    {
+        "City": "Kettle Falls",
+        "Zip Code": "99141",
+        "Website": "https://www.cityofkettlefalls.org/"
+    },
+    {
+        "City": "Kirkland",
+        "Zip Code": "98033-6189",
+        "Website": "https://www.kirklandwa.gov/Home"
+    },
+    {
+        "City": "Kittitas",
+        "Zip Code": "98934",
+        "Website": "http://www.cityofkittitas.com/"
+    },
+    {
+        "City": "Krupp",
+        "Zip Code": "98832",
+        "Website": ""
+    },
+    {
+        "City": "La Center",
+        "Zip Code": "98629",
+        "Website": "https://ci.lacenter.wa.us/"
+    },
+    {
+        "City": "La Conner",
+        "Zip Code": "98257",
+        "Website": "https://www.townoflaconner.org/"
+    },
+    {
+        "City": "Lacey",
+        "Zip Code": "98503",
+        "Website": "https://cityoflacey.org/"
+    },
+    {
+        "City": "LaCrosse",
+        "Zip Code": "99143",
+        "Website": "https://www.lacrossewa.us/"
+    },
+    {
+        "City": "Lake Forest Park",
+        "Zip Code": "98155",
+        "Website": "https://www.cityoflfp.gov/"
+    },
+    {
+        "City": "Lake Stevens",
+        "Zip Code": "98258",
+        "Website": "https://www.lakestevenswa.gov/"
+    },
+    {
+        "City": "Lakewood",
+        "Zip Code": "98499-5027",
+        "Website": "https://cityoflakewood.us/"
+    },
+    {
+        "City": "Lamont",
+        "Zip Code": "99017",
+        "Website": ""
+    },
+    {
+        "City": "Langley",
+        "Zip Code": "98260",
+        "Website": "https://www.langleywa.org/"
+    },
+    {
+        "City": "Latah",
+        "Zip Code": "99018-0130",
+        "Website": ""
+    },
+    {
+        "City": "Leavenworth",
+        "Zip Code": "98826",
+        "Website": "https://cityofleavenworth.com/"
+    },
+    {
+        "City": "Liberty Lake",
+        "Zip Code": "99019",
+        "Website": "https://www.libertylakewa.gov/"
+    },
+    {
+        "City": "Lind",
+        "Zip Code": "99341",
+        "Website": ""
+    },
+    {
+        "City": "Long Beach",
+        "Zip Code": "98631",
+        "Website": "https://www.longbeachwa.gov/"
+    },
+    {
+        "City": "Longview",
+        "Zip Code": "98632-7080",
+        "Website": "https://www.mylongview.com/"
+    },
+    {
+        "City": "Lyman",
+        "Zip Code": "98263",
+        "Website": "https://townoflyman.com/"
+    },
+    {
+        "City": "Lynden",
+        "Zip Code": "98264",
+        "Website": "https://www.lyndenwa.org/"
+    },
+    {
+        "City": "Lynnwood",
+        "Zip Code": "98036",
+        "Website": "https://www.lynnwoodwa.gov/Home"
+    },
+    {
+        "City": "Mabton",
+        "Zip Code": "98935",
+        "Website": "https://www.cityofmabton.com/"
+    },
+    {
+        "City": "Malden",
+        "Zip Code": "99149",
+        "Website": "https://maldenwaorg.wordpress.com/"
+    },
+    {
+        "City": "Mansfield",
+        "Zip Code": "98830",
+        "Website": ""
+    },
+    {
+        "City": "Maple Valley",
+        "Zip Code": "98038",
+        "Website": "https://www.maplevalleywa.gov/"
+    },
+    {
+        "City": "Marcus",
+        "Zip Code": "99151",
+        "Website": ""
+    },
+    {
+        "City": "Marysville",
+        "Zip Code": "98270",
+        "Website": "https://marysvillewa.gov/"
+    },
+    {
+        "City": "Mattawa",
+        "Zip Code": "99349",
+        "Website": "https://www.cityofmattawa.com/"
+    },
+    {
+        "City": "McCleary",
+        "Zip Code": "98557",
+        "Website": "https://www.cityofmccleary.com/"
+    },
+    {
+        "City": "Medical Lake",
+        "Zip Code": "99022",
+        "Website": "https://medical-lake.org/"
+    },
+    {
+        "City": "Medina",
+        "Zip Code": "98039",
+        "Website": "https://www.medina-wa.gov/"
+    },
+    {
+        "City": "Mercer Island",
+        "Zip Code": "98040-3732",
+        "Website": "https://www.mercerisland.gov/"
+    },
+    {
+        "City": "Mesa",
+        "Zip Code": "99343",
+        "Website": ""
+    },
+    {
+        "City": "Metaline",
+        "Zip Code": "99152",
+        "Website": ""
+    },
+    {
+        "City": "Metaline Falls",
+        "Zip Code": "99153",
+        "Website": ""
+    },
+    {
+        "City": "Mill Creek",
+        "Zip Code": "98012",
+        "Website": "https://www.cityofmillcreek.com/"
+    },
+    {
+        "City": "Millwood",
+        "Zip Code": "99206-4399",
+        "Website": "https://www.millwoodwa.us/"
+    },
+    {
+        "City": "Milton",
+        "Zip Code": "98354",
+        "Website": "https://www.cityofmilton.net/"
+    },
+    {
+        "City": "Monroe",
+        "Zip Code": "98272",
+        "Website": "https://www.monroewa.gov/"
+    },
+    {
+        "City": "Montesano",
+        "Zip Code": "98563",
+        "Website": "https://cityofmontesano.com/"
+    },
+    {
+        "City": "Morton",
+        "Zip Code": "98356",
+        "Website": "https://www.visitmorton.com/"
+    },
+    {
+        "City": "Moses Lake",
+        "Zip Code": "98837",
+        "Website": "https://www.cityofml.com/"
+    },
+    {
+        "City": "Mossyrock",
+        "Zip Code": "98564",
+        "Website": "https://www.cityofmossyrock.com/"
+    },
+    {
+        "City": "Mount Vernon",
+        "Zip Code": "98273",
+        "Website": "https://www.mountvernonwa.gov/"
+    },
+    {
+        "City": "Mountlake Terrace",
+        "Zip Code": "98043",
+        "Website": "https://www.cityofmlt.com/"
+    },
+    {
+        "City": "Moxee",
+        "Zip Code": "98936",
+        "Website": "https://cityofmoxee.us/"
+    },
+    {
+        "City": "Mukilteo",
+        "Zip Code": "98275",
+        "Website": "https://mukilteowa.gov/"
+    },
+    {
+        "City": "Naches",
+        "Zip Code": "98937",
+        "Website": "https://townofnaches.com/"
+    },
+    {
+        "City": "Napavine",
+        "Zip Code": "98565",
+        "Website": "https://www.cityofnapavine.com/"
+    },
+    {
+        "City": "Nespelem",
+        "Zip Code": "99155",
+        "Website": "https://www.townofnespelem.com/"
+    },
+    {
+        "City": "Newcastle",
+        "Zip Code": "98056-1316",
+        "Website": "https://www.newcastlewa.gov/"
+    },
+    {
+        "City": "Newport",
+        "Zip Code": "99156",
+        "Website": "https://newport-wa.org/"
+    },
+    {
+        "City": "Nooksack",
+        "Zip Code": "98276",
+        "Website": "http://www.cityofnooksack.com/"
+    },
+    {
+        "City": "Normandy Park",
+        "Zip Code": "98166",
+        "Website": "https://normandyparkwa.gov/"
+    },
+    {
+        "City": "North Bend",
+        "Zip Code": "98045",
+        "Website": "https://northbendwa.gov/"
+    },
+    {
+        "City": "North Bonneville",
+        "Zip Code": "98639",
+        "Website": "https://northbonneville.net/"
+    },
+    {
+        "City": "Northport",
+        "Zip Code": "99157",
+        "Website": ""
+    },
+    {
+        "City": "Oak Harbor",
+        "Zip Code": "98277",
+        "Website": "https://www.oakharbor.gov/"
+    },
+    {
+        "City": "Oakesdale",
+        "Zip Code": "99158",
+        "Website": "https://www.oakesdale.org/"
+    },
+    {
+        "City": "Oakville",
+        "Zip Code": "98568",
+        "Website": "https://www.oakvillecityhall.com/"
+    },
+    {
+        "City": "Ocean Shores",
+        "Zip Code": "98569",
+        "Website": "https://www.osgov.com/"
+    },
+    {
+        "City": "Odessa",
+        "Zip Code": "99159",
+        "Website": "https://odessawa.org/"
+    },
+    {
+        "City": "Okanogan",
+        "Zip Code": "98840",
+        "Website": "https://www.okanogancity.com/"
+    },
+    {
+        "City": "Olympia",
+        "Zip Code": "98507",
+        "Website": "https://www.olympiawa.gov/"
+    },
+    {
+        "City": "Omak",
+        "Zip Code": "98841",
+        "Website": "https://www.omakcity.com/"
+    },
+    {
+        "City": "Oroville",
+        "Zip Code": "98844",
+        "Website": "https://oroville-wa.com/"
+    },
+    {
+        "City": "Orting",
+        "Zip Code": "98360",
+        "Website": "https://www.cityoforting.org/"
+    },
+    {
+        "City": "Othello",
+        "Zip Code": "99344-1149",
+        "Website": "https://www.othellowa.gov/"
+    },
+    {
+        "City": "Pacific",
+        "Zip Code": "98047",
+        "Website": "https://www.pacificwa.gov/"
+    },
+    {
+        "City": "Palouse",
+        "Zip Code": "99161",
+        "Website": "https://www.palousewa.gov/"
+    },
+    {
+        "City": "Pasco",
+        "Zip Code": "99301",
+        "Website": "https://www.pasco-wa.gov/"
+    },
+    {
+        "City": "Pateros",
+        "Zip Code": "98846",
+        "Website": "https://www.pateros.com/"
+    },
+    {
+        "City": "Pe Ell",
+        "Zip Code": "98572",
+        "Website": "https://www.townofpeell.com/"
+    },
+    {
+        "City": "Pomeroy",
+        "Zip Code": "99347",
+        "Website": "https://www.cityofpomeroy1.com/"
+    },
+    {
+        "City": "Port Angeles",
+        "Zip Code": "98362",
+        "Website": "https://www.cityofpa.us/"
+    },
+    {
+        "City": "Port Orchard",
+        "Zip Code": "98366",
+        "Website": "https://portorchardwa.gov/"
+    },
+    {
+        "City": "Port Townsend",
+        "Zip Code": "98368",
+        "Website": "https://cityofpt.us/"
+    },
+    {
+        "City": "Poulsbo",
+        "Zip Code": "98370-7347",
+        "Website": "https://cityofpoulsbo.com/"
+    },
+    {
+        "City": "Prescott",
+        "Zip Code": "99348",
+        "Website": ""
+    },
+    {
+        "City": "Prosser",
+        "Zip Code": "99350",
+        "Website": "https://cityofprosser.com/"
+    },
+    {
+        "City": "Pullman",
+        "Zip Code": "99163",
+        "Website": "https://www.pullman-wa.gov/"
+    },
+    {
+        "City": "Puyallup",
+        "Zip Code": "98371",
+        "Website": "https://www.cityofpuyallup.org/"
+    },
+    {
+        "City": "Quincy",
+        "Zip Code": "98848",
+        "Website": "https://www.quincywashington.us/"
+    },
+    {
+        "City": "Rainier",
+        "Zip Code": "98576",
+        "Website": "https://www.cityofrainierwa.org/"
+    },
+    {
+        "City": "Raymond",
+        "Zip Code": "98577",
+        "Website": "https://cityofraymond.com/"
+    },
+    {
+        "City": "Reardan",
+        "Zip Code": "99029",
+        "Website": ""
+    },
+    {
+        "City": "Redmond",
+        "Zip Code": "98073-9710",
+        "Website": "https://www.redmond.gov/"
+    },
+    {
+        "City": "Renton",
+        "Zip Code": "98057",
+        "Website": "https://www.rentonwa.gov/"
+    },
+    {
+        "City": "Republic",
+        "Zip Code": "99166",
+        "Website": "https://www.cityofrepublic.org/"
+    },
+    {
+        "City": "Richland",
+        "Zip Code": "99352-0190",
+        "Website": "https://www.ci.richland.wa.us/"
+    },
+    {
+        "City": "Ridgefield",
+        "Zip Code": "98642-0608",
+        "Website": "https://ridgefieldwa.us/"
+    },
+    {
+        "City": "Ritzville",
+        "Zip Code": "99169",
+        "Website": "https://www.cityofritzville.com/"
+    },
+    {
+        "City": "Riverside",
+        "Zip Code": "98849",
+        "Website": ""
+    },
+    {
+        "City": "Rock Island",
+        "Zip Code": "98850",
+        "Website": "https://www.rockislandwa.gov/"
+    },
+    {
+        "City": "Rockford",
+        "Zip Code": "99030",
+        "Website": "https://www.rockfordwa.com/"
+    },
+    {
+        "City": "Rosalia",
+        "Zip Code": "99170",
+        "Website": "https://townofrosalia.net/"
+    },
+    {
+        "City": "Roslyn",
+        "Zip Code": "98941",
+        "Website": "https://www.ci.roslyn.wa.us/"
+    },
+    {
+        "City": "Roy",
+        "Zip Code": "98580",
+        "Website": "https://cityofroywa.us/"
+    },
+    {
+        "City": "Royal City",
+        "Zip Code": "99357",
+        "Website": "https://www.royalcitywa.org/"
+    },
+    {
+        "City": "Ruston",
+        "Zip Code": "98407-6597",
+        "Website": "https://www.rustonwa.org/"
+    },
+    {
+        "City": "Sammamish",
+        "Zip Code": "98075",
+        "Website": "https://www.sammamish.us/"
+    },
+    {
+        "City": "SeaTac",
+        "Zip Code": "98188",
+        "Website": "https://www.seatacwa.gov/"
+    },
+    {
+        "City": "Seattle",
+        "Zip Code": "98104",
+        "Website": "https://www.seattle.gov/"
+    },
+    {
+        "City": "Sedro-Woolley",
+        "Zip Code": "98284",
+        "Website": "https://www.sedro-woolley.gov/"
+    },
+    {
+        "City": "Selah",
+        "Zip Code": "98942",
+        "Website": "https://selahwa.gov"
+    },
+    {
+        "City": "Sequim",
+        "Zip Code": "98382-3317",
+        "Website": "https://www.sequimwa.gov/"
+    },
+    {
+        "City": "Shelton",
+        "Zip Code": "98584",
+        "Website": "https://www.sheltonwa.gov/"
+    },
+    {
+        "City": "Shoreline",
+        "Zip Code": "98133-4905",
+        "Website": "https://www.shorelinewa.gov/"
+    },
+    {
+        "City": "Skykomish",
+        "Zip Code": "98288",
+        "Website": "https://skykomishwa.gov/"
+    },
+    {
+        "City": "Snohomish",
+        "Zip Code": "98290",
+        "Website": "https://www.snohomishwa.gov/"
+    },
+    {
+        "City": "Snoqualmie",
+        "Zip Code": "98065",
+        "Website": "https://www.snoqualmiewa.gov/"
+    },
+    {
+        "City": "Soap Lake",
+        "Zip Code": "98851",
+        "Website": "https://www.soaplakewa.gov"
+    },
+    {
+        "City": "South Bend",
+        "Zip Code": "98586-0009",
+        "Website": "https://southbend-wa.gov/"
+    },
+    {
+        "City": "South Cle Elum",
+        "Zip Code": "98943",
+        "Website": ""
+    },
+    {
+        "City": "South Prairie",
+        "Zip Code": "98385",
+        "Website": "https://www.townofsp.com/"
+    },
+    {
+        "City": "Spangle",
+        "Zip Code": "99031",
+        "Website": ""
+    },
+    {
+        "City": "Spokane",
+        "Zip Code": "99201",
+        "Website": "https://my.spokanecity.org/"
+    },
+    {
+        "City": "Spokane Valley",
+        "Zip Code": "99206",
+        "Website": "https://www.spokanevalleywa.gov/"
+    },
+    {
+        "City": "Sprague",
+        "Zip Code": "99032",
+        "Website": "https://sprague-wa.us/"
+    },
+    {
+        "City": "Springdale",
+        "Zip Code": "99173",
+        "Website": ""
+    },
+    {
+        "City": "St. John",
+        "Zip Code": "99171",
+        "Website": "https://www.stjohnwa.com/"
+    },
+    {
+        "City": "Stanwood",
+        "Zip Code": "98292",
+        "Website": "https://stanwoodwa.org/"
+    },
+    {
+        "City": "Starbuck",
+        "Zip Code": "99359",
+        "Website": ""
+    },
+    {
+        "City": "Steilacoom",
+        "Zip Code": "98388",
+        "Website": "https://townofsteilacoom.org/"
+    },
+    {
+        "City": "Stevenson",
+        "Zip Code": "98648",
+        "Website": "https://www.ci.stevenson.wa.us/"
+    },
+    {
+        "City": "Sultan",
+        "Zip Code": "98294",
+        "Website": "https://www.ci.sultan.wa.us/"
+    },
+    {
+        "City": "Sumas",
+        "Zip Code": "98295",
+        "Website": "https://www.cityofsumas.com/"
+    },
+    {
+        "City": "Sumner",
+        "Zip Code": "98390",
+        "Website": "https://sumnerwa.gov/"
+    },
+    {
+        "City": "Sunnyside",
+        "Zip Code": "98944",
+        "Website": "https://www.sunnyside-wa.gov/"
+    },
+    {
+        "City": "Tacoma",
+        "Zip Code": "98402",
+        "Website": "https://www.cityoftacoma.org/"
+    },
+    {
+        "City": "Tekoa",
+        "Zip Code": "99033",
+        "Website": "https://www.tekoawa.com/"
+    },
+    {
+        "City": "Tenino",
+        "Zip Code": "98589",
+        "Website": "https://www.cityoftenino.us/"
+    },
+    {
+        "City": "Tieton",
+        "Zip Code": "98947",
+        "Website": "https://cityoftieton.com/"
+    },
+    {
+        "City": "Toledo",
+        "Zip Code": "98591",
+        "Website": "https://toledowa.us/"
+    },
+    {
+        "City": "Tonasket",
+        "Zip Code": "98855",
+        "Website": "https://www.tonasketwa.gov/"
+    },
+    {
+        "City": "Toppenish",
+        "Zip Code": "98948",
+        "Website": "http://cityoftoppenish.us/"
+    },
+    {
+        "City": "Tukwila",
+        "Zip Code": "98188",
+        "Website": "https://www.tukwilawa.gov/"
+    },
+    {
+        "City": "Tumwater",
+        "Zip Code": "98501",
+        "Website": "https://www.ci.tumwater.wa.us/"
+    },
+    {
+        "City": "Twisp",
+        "Zip Code": "98856",
+        "Website": "https://www.townoftwisp.com/"
+    },
+    {
+        "City": "Union Gap",
+        "Zip Code": "98903-0008",
+        "Website": "https://uniongapwa.gov/"
+    },
+    {
+        "City": "Uniontown",
+        "Zip Code": "99179",
+        "Website": "https://uniontownwa.org/"
+    },
+    {
+        "City": "University Place",
+        "Zip Code": "98466",
+        "Website": "https://www.cityofup.com/"
+    },
+    {
+        "City": "Vader",
+        "Zip Code": "98593",
+        "Website": "https://www.vaderwa.org/"
+    },
+    {
+        "City": "Vancouver",
+        "Zip Code": "98668-1995",
+        "Website": "https://www.cityofvancouver.us/"
+    },
+    {
+        "City": "Waitsburg",
+        "Zip Code": "99361",
+        "Website": "https://www.cityofwaitsburg.com/"
+    },
+    {
+        "City": "Walla Walla",
+        "Zip Code": "99362",
+        "Website": "https://www.wallawallawa.gov/"
+    },
+    {
+        "City": "Wapato",
+        "Zip Code": "98951-1326",
+        "Website": "https://wapato-city.org/"
+    },
+    {
+        "City": "Warden",
+        "Zip Code": "98857",
+        "Website": "https://cityofwarden.org/"
+    },
+    {
+        "City": "Washougal",
+        "Zip Code": "98671",
+        "Website": "https://www.cityofwashougal.us/"
+    },
+    {
+        "City": "Washtucna",
+        "Zip Code": "99371",
+        "Website": "https://washtucna.org/"
+    },
+    {
+        "City": "Waterville",
+        "Zip Code": "98858",
+        "Website": "https://www.watervillewa.com/"
+    },
+    {
+        "City": "Waverly",
+        "Zip Code": "99039",
+        "Website": ""
+    },
+    {
+        "City": "Wenatchee",
+        "Zip Code": "98807-0519",
+        "Website": "https://www.wenatcheewa.gov/"
+    },
+    {
+        "City": "West Richland",
+        "Zip Code": "99353",
+        "Website": "https://www.westrichland.org/"
+    },
+    {
+        "City": "Westport",
+        "Zip Code": "98595",
+        "Website": "https://www.ci.westport.wa.us/"
+    },
+    {
+        "City": "White Salmon",
+        "Zip Code": "98672",
+        "Website": "https://www.whitesalmonwa.gov/"
+    },
+    {
+        "City": "Wilbur",
+        "Zip Code": "99185",
+        "Website": "http://www.wilburwa.com/"
+    },
+    {
+        "City": "Wilkeson",
+        "Zip Code": "98396",
+        "Website": "https://www.townofwilkeson.com/"
+    },
+    {
+        "City": "Wilson Creek",
+        "Zip Code": "98860",
+        "Website": "http://www.wilsoncreekwa.com/"
+    },
+    {
+        "City": "Winlock",
+        "Zip Code": "98596",
+        "Website": "https://cityofwinlock.com/"
+    },
+    {
+        "City": "Winthrop",
+        "Zip Code": "98862-0459",
+        "Website": "http://www.townofwinthrop.com/"
+    },
+    {
+        "City": "Woodinville",
+        "Zip Code": "98072",
+        "Website": "https://www.ci.woodinville.wa.us/"
+    },
+    {
+        "City": "Woodland",
+        "Zip Code": "98674",
+        "Website": "https://www.ci.woodland.wa.us/"
+    },
+    {
+        "City": "Woodway",
+        "Zip Code": "98020",
+        "Website": "https://www.townofwoodway.com/"
+    },
+    {
+        "City": "Yacolt",
+        "Zip Code": "98675",
+        "Website": "https://www.townofyacolt.com/"
+    },
+    {
+        "City": "Yakima",
+        "Zip Code": "98901",
+        "Website": "https://www.yakimawa.gov/"
+    },
+    {
+        "City": "Yarrow Point",
+        "Zip Code": "98004",
+        "Website": "https://yarrowpointwa.gov/"
+    },
+    {
+        "City": "Yelm",
+        "Zip Code": "98597",
+        "Website": "https://www.yelmwa.gov/"
+    },
+    {
+        "City": "Zillah",
+        "Zip Code": "98953",
+        "Website": "https://www.cityofzillah.us/"
+    }
+]
