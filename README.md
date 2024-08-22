@@ -43,3 +43,6 @@ The tool underwent three iterations before reaching its final version, which is 
 Due to time constraints, some solution requirements were not fully met. The third and fourth questions, which include options like "8 cubic yards" and "96-gallon garbage cart," lack detail, making it challenging for users to understand waste measurements. Adding visual aids would enhance user comprehension.
 
 Another limitation is that the tool's estimated compliance dates may not be accurate. To improve precision, additional questions could be included to gather more specific information about users and their businesses. However, increasing the number of questions may compromise the tool's simplicity and ease of use. Further research and discussion are necessary to find the right balance and enhance the tool's accuracy.
+
+## Next Step
+- The local government website links embedded in the messages responding to zip codes should be implemented.
